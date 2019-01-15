@@ -7,6 +7,8 @@ class App extends Component {
     constructor(props) {
         super(props)
 
+        this.superSeriousStuff = "lol";
+
         this.state = {
             text: "",
             taskList: [
@@ -28,14 +30,16 @@ class App extends Component {
         const oldList = this.state.taskList;
 
         const updatedList= [ ...oldList, taskToAdd ];
+
         console.log(updatedList);
+
         this.setState({taskList: updatedList});
     }
 
     mapMyTasks() {
         const newMap = this.state.taskList.map(
-            function (task) {
-                return <li>{ task }</li>
+             (task, idx) => {
+                return <li key={idx} className="cool-style">{ task }</li>
             }
         )
         return newMap;
@@ -43,21 +47,25 @@ class App extends Component {
 
     render() {
 
+        this.newName = this.props.message;
+
         console.log("I'm rendering this thingy");
 
         return (
             <div>
-                <h1>
-                    { this.state.text.length > 0
-                        ? this.state.text
-                        : this.props.message
-                    }
-                </h1>
+                <h1>{ this.state.text.length === 0
+                    ? this.props.message
+                    : this.state.text
+                }</h1>
                 <form onSubmit={this.onSubmitHander}>
-                    <input id="input-lol" onChange={ this.onChangeHandler.bind(this) } type="text"/>
+                    <input id="input-lol"
+                           onFocus={ () => { console.log(" ::: focued")} }
+                           onChange={ this.onChangeHandler.bind(this) }
+                           type="text"/>
                 </form>
                 <h2>list here: </h2>
                 <ul>{ this.mapMyTasks() }</ul>
+                <h2>{ this.props.purpose.split('').reverse() }</h2>
             </div>
         );
       }
