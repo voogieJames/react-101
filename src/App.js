@@ -7,33 +7,36 @@ class App extends Component {
     constructor(props) {
         super(props)
 
-        this.superSeriousStuff = "lol";
-
         this.state = {
             text: "",
             taskList: [
                 "Go home",
                 "Read docs",
                 "Wash my dog"
-            ]
+            ],
+            colorSchema: "#dddddd"
         }
     }
 
     onChangeHandler(event) {
-        const newValue = event.target.value
+        const newValue = event.target.value;
         this.setState({text: newValue});
     }
 
     onSubmitHander = (event) => {
-        event.preventDefault();
+        event.preventDefault()
+        /*
         const taskToAdd = this.state.text;
         const oldList = this.state.taskList;
-
         const updatedList= [ ...oldList, taskToAdd ];
-
-        console.log(updatedList);
-
         this.setState({taskList: updatedList});
+        */
+        const colorValue = this.state.text;
+        const regex = new RegExp("^#(?:[0-9a-fA-F]{3}){1,2}$");
+        debugger
+        if (regex.test(colorValue)) {
+            this.setState({colorSchema: colorValue});
+        }
     }
 
     mapMyTasks() {
@@ -53,14 +56,14 @@ class App extends Component {
 
         return (
             <div>
-                <h1>{ this.state.text.length === 0
+                <h1 style={ {backgroundColor: this.state.colorSchema} }>{ this.state.text.length === 0
                     ? this.props.message
                     : this.state.text
                 }</h1>
                 <form onSubmit={this.onSubmitHander}>
                     <input id="input-lol"
                            onFocus={ () => { console.log(" ::: focued")} }
-                           onChange={ this.onChangeHandler.bind(this) }
+                           onChange={ this.onChangeHandler.bind(this)}
                            type="text"/>
                 </form>
                 <h2>list here: </h2>
