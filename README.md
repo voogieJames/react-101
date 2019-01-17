@@ -8,8 +8,13 @@ I used comments in the code so pay attention 👀
 ## What you need to achieve
 This is how the app was looking before I ruined everything ...
 
-1.  App starts with a list of available contacts:
-![List of Contacts](https://raw.githubusercontent.com/voogieJames/react-101/exercise1/snapshots/step1.png)
+#### Step 1.  
+App starts with a list of available contacts:
+![List of Contacts Step 1](https://raw.githubusercontent.com/voogieJames/react-101/exercise1/snapshots/step1.png)
+
+#### Step 2. 
+When user clicks to contact, second screen is rendered with more detailed information:
+![List of Contacts Step2](https://raw.githubusercontent.com/voogieJames/react-101/exercise1/snapshots/step2.png)
 
 
 ## Available Scripts
