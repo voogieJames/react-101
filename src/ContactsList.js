@@ -13,35 +13,37 @@ class ContactsList extends React.Component {
     }
   }
 
+  //  isn't it a bit weird function?
   componentDidMount() {
-    this.getContacts();
+    //  server url where you can fetch data you need
+    const url = "https://voogie.glitch.me/contacts";
+    //  think why we call this function here
+    this.getContacts(url);
   }
 
-  getContacts() {
-    fetch('http://localhost:8686/people')
-        .then(resp => resp.json())
-        .then(results => this.setState({contacts: results}));
+  //  this method get's called when the componend is first mounted
+  //  how can we use it?
+  getContacts(url) {
+    //  figure how to use fetch command to get values from sever
+    //  make sure you understand next two commented lines
+        //  .then(resp => resp.json())
+        //  .then(results => console.log("Hey, we have a response: ", results));
   };
 
-  onContactClickHandler = (clickedId) => {
-    const contactClicked = this.state.contacts.find(contact => {
-      return contact.id === clickedId
-    });
-    this.setState({displayContact: contactClicked});
+  onContactClickHandler(clickedId) {
+    //  find an object based on id
+    //  make the project render information about it
   }
 
+  //  do we actually need this?  
   onBackClick = () => {
-    this.setState({displayContact: null});
+    console.log("click");
   }
 
   render() {
     return (
         <div className="contacts-app">
-          <div className="title">{ this.state.displayContact 
-              ? this.state.displayContact.name
-              : this.props.headerText
-            }
-          </div>
+          <div className="title">Contacts List</div>
           { this.state.displayContact 
             ? <ContactCard 
                 details={this.state.displayContact} 

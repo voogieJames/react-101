@@ -1,6 +1,7 @@
 import React from 'react';
 
-class ContactCard extends React.Component {
+//  make sure nothing is wrong and we are able to render this one 
+class ContactCard extends Component {
 
     render() {
         return(
@@ -28,10 +29,8 @@ class ContactCard extends React.Component {
                         <span>{this.props.details.description}</span>
                     </div>
                 </div>
-                <div className="back-btn" onClick={this.props.onBackClick}>Back</div>
+                <a href="/"><div className="back-btn">Back</div></a>
             </div>
         )
     }
 }
-
-export default ContactCard;
