@@ -7,6 +7,8 @@ I used comments in the code so pay attention 👀
 #### *If you stuck and about to give up:* I suggest you to look into `basic-react` branch in the same repository.
 #### Avoid using `master` branch, since it contains working example of the project.
 
+#### HAPPY HACKING! 🙌
+
 ## What you need to achieve
 This is how the app was looking before I ruined everything ...
 
@@ -34,5 +36,3 @@ Contacts list app is fetching data from the glitch server app here: [https://voo
 If by some reason data isn't available, I encourage you to use local *dev-server*
 To start local *dev-server* run `npm run dev-server` from the project root folder and make sure that in your application
 you're using the following URL: *http://localhost:8686/people*.
-
-#### HAPPY HACKING! 🙌
