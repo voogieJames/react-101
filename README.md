@@ -6,6 +6,10 @@ I used comments in the code so pay attention 👀
 ### Note: As a part of homework I assume you will figure out how to get data from the server. Styles and class names are provided so you don't need to design anything, but keep in mind if you wish to add something of your own, like another component, more style or somehow improve this project, feel free to do so 🎉🎉🎉
 
 ## What you need to achieve
+This is how the app was looking before I ruined everything ...
+
+1.  App starts witha list of available contacts:
+
 
 
 ## Available Scripts
@@ -17,7 +21,7 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `server` or dev-server
+### server and dev-server
 
 Contacts list app is fetching data from the glitch server app here: [https://voogie.glitch.me/contacts](https://voogie.glitch.me/contacts)
 If by some reason data isn't available, I encourage you to use local *dev-server*
