@@ -1,7 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # Exercise 1: Contacts List
-Hello, awesome people! In this exercise we are building a list with contacts. 
+Hello, awesome people! In this exercise we are building a list with contacts. The only thing you need to do in order to achieve the goal is to remember all we were talking about during our _intro_ sessions and *fill* or *fix* missed or broken parts of code. 
+
+I used comments in the code so pay attention 👀 
+
+### Note: As a part of homework I assume you will figure out how to get data from the server. Styles and class names are provided so you don't need to design anything, but keep in mind if you wish to add something of your own, like another component, more style or somehow improve this project, feel free to do so 🎉🎉🎉
 
 ## What you need to achieve
 
