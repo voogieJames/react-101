@@ -8,8 +8,8 @@ I used comments in the code so pay attention 👀
 ## What you need to achieve
 This is how the app was looking before I ruined everything ...
 
-1.  App starts witha list of available contacts:
-
+1.  App starts with a list of available contacts:
+[List of Contacts](https://github.com/voogieJames/react-101/blob/exercise1/snapshots/step1.png)
 
 
 ## Available Scripts
