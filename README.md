@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Exercise 1: Contacts List
+Hello, awesome people! In this exercise we are building a list with contacts. 
+
+## What you need to achieve
+
+
 ## Available Scripts
 
 In the project directory, you can run:
