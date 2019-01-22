@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 class ContactCard extends React.Component {
 
@@ -28,7 +29,7 @@ class ContactCard extends React.Component {
                         <span>{this.props.details.description}</span>
                     </div>
                 </div>
-                <div className="back-btn" onClick={this.props.onBackClick}>Back</div>
+                <Link to="/" className="back-btn">Back</Link>
             </div>
         )
     }

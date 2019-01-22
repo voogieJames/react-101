@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Contacts from './components/Contacts';
 import ContactCard from './components/ContactCard';
 import './ContactsList.css';
 
-class ContactsList extends React.Component {
+class ContactsList extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
       contacts: [],
-      displayContact: null
     }
   }
 
@@ -30,29 +30,40 @@ class ContactsList extends React.Component {
     this.setState({displayContact: contactClicked});
   }
 
-  onBackClick = () => {
-    this.setState({displayContact: null});
+  getContactsList = (props) => (
+    <Contacts 
+      contacts={this.state.contacts} 
+      onContactClick={this.onContactClickHandler}
+      {...props}
+    />
+  )
+
+  contactInfo = (props) => {
+    const found = this.state.contacts.find(
+      contact => { return contact.id.toString() === props.match.params.id }
+    );
+    return found 
+      ? (
+        <ContactCard 
+          details={found}
+        />
+      )
+      : null
   }
 
   render() {
     return (
+      <Router>
         <div className="contacts-app">
           <div className="title">{ this.state.displayContact 
               ? this.state.displayContact.name
               : this.props.headerText
             }
           </div>
-          { this.state.displayContact 
-            ? <ContactCard 
-                details={this.state.displayContact} 
-                onBackClick={this.onBackClick}
-              />
-            : <Contacts 
-                contacts={this.state.contacts} 
-                onContactClick={this.onContactClickHandler}
-              />
-          }
+          <Route exact path="/" component={this.getContactsList} />
+          <Route path="/contact/:id" component={this.contactInfo} />
         </div>
+      </Router> 
     );
   }
 }

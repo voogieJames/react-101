@@ -107,9 +107,10 @@
 .back-btn {
   text-align: center;
   width: 54px;
+  color: #333;
   border: 1px solid #dedede;
   border-radius: 5px;
-  cursor: pointer;
+  text-decoration: none;
 }
 
 .back-btn:hover {

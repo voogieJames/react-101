@@ -13,7 +13,7 @@ class Contacts extends Component {
                         name={contact.name}
                         phone={contact.phoneNumber}
                         avatar={contact.avatar} 
-                        onContactClick={this.props.onContactClick}
+                        onContactClick={() => { this.props.history.push("/contact/" + contact.id)} }
                         /> 
                     )) 
                 }
