@@ -6,7 +6,7 @@ const Info = (props) => {
     const clickHandler = (evt) => {
         evt.preventDefault();
         props.onContactClick(props.id);
-    }
+    };
 
     //  rendering contact info here
     return (
