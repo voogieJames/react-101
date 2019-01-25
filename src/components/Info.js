@@ -2,11 +2,11 @@ import React from 'react';
 
 const Info = (props) => {
 
-    //  on contact click handler
-    const clickHandler = (evt) => {
+  //   on contact click handler
+   const clickHandler = (evt) => {
         evt.preventDefault();
-        props.onContactClick(props.id);
-    }
+        props.oncontact(props.id);
+    };
 
     //  rendering contact info here
     return (
