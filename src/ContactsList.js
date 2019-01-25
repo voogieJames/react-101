@@ -26,19 +26,18 @@ class ContactsList extends React.Component {
   getContacts(url) {
     //  figure how to use fetch command to get values from sever
     //  make sure you understand next two commented lines
-        //  .then(resp => resp.json())
-        //  .then(results => console.log("Hey, we have a response: ", results));
+    fetch(url)
+         .then(resp => resp.json())
+         .then(results => this.setState({contacts : results}));
   };
-
   onContactClickHandler(clickedId) {
-    //  find an object based on id
-    //  make the project render information about it
+    this.setState({displayContact: this.state.contacts.find((element) => {return element.id === clickedId})});
   }
 
   //  do we actually need this?  
   onBackClick = () => {
-    console.log("click");
-  }
+    this.setState({displayContact: null});
+  };
 
   render() {
     return (
@@ -51,7 +50,7 @@ class ContactsList extends React.Component {
               />
             : <Contacts 
                 contacts={this.state.contacts} 
-                onContactClick={this.onContactClickHandler}
+                onContactClick={this.onContactClickHandler.bind(this)}
               />
           }
         </div>
