@@ -11,6 +11,8 @@ class ContactsList extends React.Component {
       contacts: [],
       displayContact: null
     }
+    this.getContacts = this.getContacts.bind(this);
+    this.getContacts();
   }
 
   //  isn't it a bit weird function?
@@ -24,34 +26,38 @@ class ContactsList extends React.Component {
   //  this method get's called when the componend is first mounted
   //  how can we use it?
   getContacts(url) {
-    //  figure how to use fetch command to get values from sever
-    //  make sure you understand next two commented lines
-        //  .then(resp => resp.json())
-        //  .then(results => console.log("Hey, we have a response: ", results));
-  };
+    fetch(url)
+        .then(resp => resp.json())
+        .then(resp => this.setState({contacts:resp}));
+  }
 
   onContactClickHandler(clickedId) {
+    this.setState({displayContact:this.state.contacts.find((u) => {
+        return u.id=== clickedId;
+      })});
+
     //  find an object based on id
     //  make the project render information about it
   }
 
   //  do we actually need this?  
   onBackClick = () => {
-    console.log("click");
+    this.setState({displayContact:null});
   }
 
   render() {
+
     return (
         <div className="contacts-app">
-          <div className="title">Contacts List</div>
+          <div className="title">CANTACT LIST</div>
           { this.state.displayContact 
             ? <ContactCard 
                 details={this.state.displayContact} 
                 onBackClick={this.onBackClick}
               />
             : <Contacts 
-                contacts={this.state.contacts} 
-                onContactClick={this.onContactClickHandler}
+                contacts={this.state.contacts}
+                onContactClick={this.onContactClickHandler.bind(this)}
               />
           }
         </div>
