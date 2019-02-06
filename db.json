@@ -8,11 +8,11 @@
     {
       "id": 2,
       "name": "Learn React",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "name": "Wash my car",
-      "isComplete": false,
+      "isComplete": true,
       "id": 3
     },
     {
