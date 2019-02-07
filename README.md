@@ -5,7 +5,7 @@ This project has nothing new in it. Literally, I haven't done anything, only dre
 
 #### *NOTE1*: We begin with the same old `dev-server` here, (and in the process we'll hopefully move to real db). I haven't added new styles since the last assignment, so you need to provide your own sulition and please be creative 🎉🎉🎉
 
-#### *NOTE2*: The setup didn't change since the last assignment either, meaning, you have all the good stuff here, React + Redux, but we'll definitely need Router as well, which you need to install on your our and connect stuff together and make the things happen. :fingers_crossing_even_cuter_face_emoji:
+#### *NOTE2*: The setup didn't change since the last assignment either, meaning, you have all the good stuff here, React + Redux, but we'll definitely need Router as well, which you need to install on your own and connect stuff together and finally make the things happen. :fingers_crossing_even_cuter_face_emoji:
 
 #### *NOTE3*: Our database that is served by the dev-server now has much more data and at the moment you still need to spin it up on your own machine. Task lists for previous days are available by the following api: `http://localhost:8686/YYYY-M-D` (*for example: `http://localhost:8686/2019-1-19` if you wish to get tasks for the January 19*). When adding new todoes please follow the same syntax for URL as well. A total list of all previous tasks, which you will need for `Calendar` component must be fetched here: `http://localhost:8686/allTasks`. There is no implementation available, so I will support you if there are any difficulties.
 
