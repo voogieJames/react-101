@@ -1,7 +1,7 @@
-import { getTodos, createTodo, deleteTodo, updateTodo } from '../services'
-import {
+import { getTodos, createTodo, updateTodo } from '../services'
+import { 
     INPUT_UPDATED, MESSAGE_SHOW, TODOS_LOAD, TODO_ADD, TODO_REPLACE, SET_VISIBILITY_FILTER, VISIBILITY_FILTERS,
-    loadTodos, addTodo, showMessage, deleteTod, TODO_DELETE, replaceTodo
+    loadTodos, addTodo, replaceTodo, showMessage
 } from '../actions';
 
 //  app initial state
@@ -33,19 +33,6 @@ export const saveTodo = (taskName) => {
     }
 }
 
-
-export const deleteTodos = (id) => {
-    return (dispatch, getState) => {
-        dispatch(showMessage('DELETING Todo ...'));
-        const todos = getState().todos;
-        const todo = todos.find(t => t.id === id);
-        //const toggled = { ...todo, isComplete: !todo.isComplete }
-        deleteTodo(todo)
-            .then( dispatch(deleteTod(id)))
-        //dispatch(showMessage('Updated ...'));
-    };
-}
-
 export const toggleTodo = (id) => {
     return (dispatch, getState) => {
         dispatch(showMessage('Updating Todo ...'));
@@ -54,7 +41,6 @@ export const toggleTodo = (id) => {
         const toggled = { ...todo, isComplete: !todo.isComplete }
         updateTodo(toggled)
             .then(res => dispatch(replaceTodo(res)))
-        //dispatch(showMessage('Updated ...'));
     };
 }
 
@@ -64,8 +50,6 @@ export default (state = initState, action) => {
     switch (action.type) {
         case INPUT_UPDATED:
             return {...state, currentTodo: action.payload}
-        case TODO_DELETE:
-            return {...state, todos: state.todos.filter(todos => todos.id !== action.id)}
         case MESSAGE_SHOW:
             return {...state, message: action.payload}
         case SET_VISIBILITY_FILTER:
