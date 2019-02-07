@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React TodoListYooo](https://github.com/facebook/create-react-app).
+# Exercise 2: Make Todo List Great Again!
+Howdy, guys! In this task you are challenged to used some _redux_ knowledge you have gained so far. I suggest you to go through the basic parts of _redux_ way of doing things to refresh your knowledge and be comfortable with actions and what happens when you dispatch them, what are reducers and how to connect _redux_ store to your project. 
 
-## Available Scripts
+The project that we worked on is broken into pieces again, however I scattered some comments in the every code so pay attention 👀 
 
-In the project directory, you can run:
+### *NOTE1*: In this task we local use _dev-server_ and I believe you are already know how to rig it up. Styles and class names are provided so you don't need to design anything, but keep in mind if you wish to add something on your own, feel free to do so 🎉🎉🎉
+
+#### *NOTE2*: You are starting with an App already being connected to redux store and even though _thunk_ and _dev tools_ are supported of the box, check out the way it is done. If you will have any questions, do not hesitate to ask.
+
+#### *NOTE3*: Avoid switching to `master` branch, since it contains working example of the project.
+
+## What you need to do
+  * Make Todo filter work as it's displayed on the screeshots below:
+    * Tasks should be filtered based on filter selected
+    * Selected filter button should be highlighted
+  * Adding new tasks should work as expected
+  * Fix app messages so they are showing proper message and are disappearing after some time (you can add more styling, animation and different color for different statuses) - _NOTE_: How to do this task is absolutely up to you
+  * _EXTRA TASK:_ _Delete_ and or _Edit_ tasks. This task is *optional* and I haven't implemented that part at all, so adding these functionalities into the project will make you sweat a bit, but I ensure you will have a better understanding of how things work in this pattern and will get a good experience. 
+
+#### HAPPY HACKING! 🙌
+
+This is how the app was looking before I messed everything up again :very_sad_emoji: ...
+
+*Todo list now have a filter options with tree different options:*
+#### Display All Tasks  
+![ Display All Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap1.png)
+
+
+#### Completed Tasks 
+![ Display Completed Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap2.png)
+
+
+#### Active Tasks 
+![ Display Active Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap3.png)
+
+
+## Available setup
+
+After cloning the repo you need to start npm project, meaning, download all dependencies(`npm install`) and then you can run following scripts:
 
 ### `npm start`
-
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### `npm run dev-server`
+Starts local *dev-server* run on the port `8686`.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React TodoListYooo documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web TodoListYooo
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
