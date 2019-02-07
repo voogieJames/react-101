@@ -3,7 +3,7 @@ Big times, everyone; databases getting bigger, requirements toughter. One more t
 
 This project has nothing new in it. Literally, I haven't done anything, only dreamed of the next steps and guess what, the very implementation is on you guys. :slightly_smiling_cute_face_emoji:
 
-#### *NOTE1*: We begin with the same old `dev-server` here, (and in the process we'll hopefully move to real db). I haven't added new styles since the last assignment, so need to provide your own sulition and please be creative 🎉🎉🎉
+#### *NOTE1*: We begin with the same old `dev-server` here, (and in the process we'll hopefully move to real db). I haven't added new styles since the last assignment, so you need to provide your own sulition and please be creative 🎉🎉🎉
 
 #### *NOTE2*: The setup didn't change since the last assignment either, meaning, you have all the good stuff here, React + Redux, but we'll definitely need Router as well, which you need to install on your our and connect stuff together and make the things happen. :fingers_crossing_even_cuter_face_emoji:
 
