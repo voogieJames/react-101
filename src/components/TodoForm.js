@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import { updateInput } from '../actions';
-import {connect} from "react-redux";
-import {saveTodo} from "../reducers/todoReducer";
 
 /**
  * Oh dang! Form is not functioning as well :(
@@ -13,11 +11,6 @@ class TodoForm extends Component {
     onSubmit = (event) => {
         event.preventDefault();
         //  TODO: figure out how the make this stuff work again
-        if (this.props.currentTodo.length === 0) {
-            alert('please enter anything to add')
-        }
-        else
-            this.props.saveTodo(this.props.currentTodo)
     }
 
     render() {
@@ -34,10 +27,4 @@ class TodoForm extends Component {
 }
 
 
-const mapStateToProps = state =>{
-        return{
-            currentTodo : state.currentTodo
-        }
-}
-
-export default connect(mapStateToProps,{updateInput,saveTodo})(TodoForm)
+export default TodoForm;
