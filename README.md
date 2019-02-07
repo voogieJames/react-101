@@ -1,37 +1,36 @@
 # Exercise 3: No more Mister nice Todo List!
-Howdy, guys! In this task you are challenged to used some _redux_ knowledge you have gained so far. I suggest you to go through the basic parts of _redux_ way of doing things to refresh your knowledge and be comfortable with actions and what happens when you dispatch them, what are reducers and how to connect _redux_ store to your project. 
+Big times, everyone; databases getting bigger, requirements toughter. This exercise consolidates all pieces of knowledge you've got. We already got taste of Redux and now it's time to handle some routing.
 
-The project that we worked on is broken into pieces again, however I scattered some comments in the every code so pay attention 👀 
+The project has nothing. Literally, I haven't done anything, only dreamed of the next step and guess what, the very next step - implementation is on you guys. :slightly_smiling_cute_face_emoji:
 
-### *NOTE1*: In this task we local use _dev-server_ and I believe you are already know how to rig it up. Styles and class names are provided so you don't need to design anything, but keep in mind if you wish to add something on your own, feel free to do so 🎉🎉🎉
+### *NOTE1*: We begin with the same old `dev-server` here, (and in the process we'll hopefully move to real db). I haven't added ny styles since the last assignment, so need to provide your own sulition, be creative 🎉🎉🎉
 
-#### *NOTE2*: You are starting with an App already being connected to redux store and even though _thunk_ and _dev tools_ are supported of the box, check out the way it is done. If you will have any questions, do not hesitate to ask.
+#### *NOTE2*: The setup didn't change since the last assignment either, meaning, you have all the good stuff here, React + Redux, but we'll definitely need Router as well, which you need to install on your our and connect stuff together and make the things happen. :fingers_crossing_even_cuter_face_emoji:
 
-#### *NOTE3*: Avoid switching to `master` branch, since it contains working example of the project.
+#### *NOTE3*: Our dev-server now has much more data. Task lists for previous days are avilable by the following api: `http://localhost:8686/YYYY-M-D` (*for example `http://localhost:8686/2019-1-19` if you with to get tasks for the January 19*) There is no implementation available, so I will support you if there are any difficulties.
 
-## What you need to do
-  * Make Todo filter work as it's displayed on the screeshots below:
-    * Tasks should be filtered based on filter selected
-    * Selected filter button should be highlighted
-  * Adding new tasks should work as expected
-  * Fix app messages so they are showing proper message and are disappearing after some time (you can add more styling, animation and different color for different statuses) - _NOTE_: How to do this task is absolutely up to you
-  * _EXTRA TASK:_ _Delete_ and or _Edit_ tasks. This task is *optional* and I haven't implemented that part at all, so adding these functionalities into the project will make you sweat a bit, but I ensure you will have a better understanding of how things work in this pattern and will get a good experience. 
+## Considering that the application works since the last two assignments, here is what else we wanna have:
+  1. Application opens showing todo list of *today* (plus add proper date on top, styling is up to you).
+  2. Pay attention to buttons: `Back`, `Fwd` and `Calendar` on the first snapshot below.
+    * Back and Fwd buttons are used for navigating in the history and getting todos based on the date (date format YYYY-M-D).
+      * Fwd must be inactive if the date is today.
+    * URL should change based on the date presented. For example: If we are presenting a task list for the *26th of January*, url should look like: `http://localhost:3000/2019-1-26` and so on.
+    * It shopuld be possible to just enter url in the same format and get a page with tasks list of that day.
+  3. `Calendar` button shows us a grid with todos for previous month, see the second snapshot below (at the moment only January is provided).
+    * Each day is presented as a square-card with the tasks in it.
+    * It should be possible so see which tasks are completed and which are not.
+    * Each task in the database has a specific `tag`(#family, #work, #misc...) specifying the type of task. Add a small cirle in front of task name for specific tag (pick colors on your own, but be consistent i.e one use color per tag) 
+    * It should be possible to go back and fwd between months as well (buttons are missed on the snapshot, but you got the idea)
+    * Calendar should be available by the link: `http://localhost:3000/calendar` 
 
 #### HAPPY HACKING! 🙌
 
-This is how the app was looking before I messed everything up again :very_sad_emoji: ...
-
-*Todo list now have a filter options with tree different options:*
-#### Display All Tasks  
-![ Display All Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap1.png)
+#### Snapshot 1: Todo list with today's date and a new set of buttons  
+![Snapshot 1](https://raw.githubusercontent.com/voogieJames/react-101/exercise3/snapshots/snap1.png)
 
 
-#### Completed Tasks 
-![ Display Completed Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap2.png)
-
-
-#### Active Tasks 
-![ Display Active Tasks](https://raw.githubusercontent.com/voogieJames/react-101/exercise2/snapshots/snap3.png)
+#### Snapshot 2: Calendar view with tasks for the last month
+![Snapshot 2](https://raw.githubusercontent.com/voogieJames/react-101/exercise3/snapshots/snap2.png)
 
 
 ## Available setup
