@@ -21,9 +21,9 @@ This project has nothing new in it. Literally, I haven't done anything, only dre
   3. `Calendar` button shows us a grid with todos for previous month, see the second snapshot below (at the moment only January is provided).
     * Each day is presented as a square-card with the tasks in it.
     * It should be possible so see which tasks are completed and which are not.
-    * Each task in the database has a specific `tag`(#family, #work, #misc...) specifying the type of task. Add a small cirle in front of task name for specific tag (pick colors on your own, but be consistent i.e one use color per tag) 
-    * It should be possible to go back and fwd between months as well (buttons are missed on the snapshot, but you got the idea)
-    * Calendar should be available by the link: `http://localhost:3000/calendar` 
+    * Each task in the database has a specific `tag`(#family, #work, #misc...) specifying the type of task. Add a small cirle in front of task name for specific tag (pick colors on your own, but be consistent i.e one use color per tag).
+    * It should be possible to go back and fwd between months as well (buttons are missed on the snapshot, but you got the idea).
+    * Calendar should be available by the link: `http://localhost:3000/calendar`.
 
 #### HAPPY HACKING! 🙌
 
