@@ -15,9 +15,9 @@ This project has nothing new in it. Literally, I haven't done anything, only dre
   1. Application opens showing todo list of *today* (plus add proper date on top, styling is up to you).
   2. Pay attention to buttons: `Back`, `Fwd` and `Calendar` on the first snapshot below.
     * Back and Fwd buttons are used for navigating in the history and getting todos based on the date (date format YYYY-M-D).
-      * Fwd must be inactive if the date is today.
+    * Fwd must be inactive if the date is today.
     * URL should change based on the date presented. For example: If we are presenting a task list for the *26th of January*, url should look like: `http://localhost:3000/2019-1-26` and so on.
-    * It shopuld be possible to just enter url in the same format and get a page with tasks list of that day.
+    * It should be possible to just enter url in the same format and get a page with tasks list of that day.
   3. `Calendar` button shows us a grid with todos for previous month, see the second snapshot below (at the moment only January is provided).
     * Each day is presented as a square-card with the tasks in it.
     * It should be possible so see which tasks are completed and which are not.
