@@ -19,7 +19,7 @@ This project has nothing new in it. Literally, I haven't done anything, only dre
     * URL should change based on the date presented. For example: If we are presenting a task list for the *26th of January*, url should look like: `http://localhost:3000/2019-1-26` and so on.
     * It should be possible to just enter url in the same format and get a page with tasks list of that day.
   3. `Calendar` button shows us a grid with todos for previous month, see the second snapshot below (at the moment only January is provided).
-    * Each day is presented as a square-card with the tasks in it.
+  - Each day is presented as a square-card with the tasks in it.
     * It should be possible so see which tasks are completed and which are not.
     * Each task in the database has a specific `tag`(#family, #work, #misc...) specifying the type of task. Add a small cirle in front of task name for specific tag (pick colors on your own, but be consistent i.e one use color per tag).
     * It should be possible to go back and fwd between months as well (buttons are missed on the snapshot, but you got the idea).
