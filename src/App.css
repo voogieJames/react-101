@@ -5,10 +5,135 @@
   margin: 0;
 }
 
+
 body {
   display: flex;
   justify-content: center;
-} 
+}
+
+.timer {
+  color: #4CAF50;
+  float: left;
+}
+
+.timerHeader {
+  color: #000;
+}
+
+#done-prev {
+  color: #1ef52e;
+  margin: 2%;
+  font-style: italic;
+  font-size: medium;
+  opacity: 0;
+  display: none;
+}
+
+#done-after {
+  color: #1ef52e;
+  margin: 2%;
+  font-style: italic;
+  font-size: medium;
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+#undone-prev {
+  color: #f54150;
+  margin: 2%;
+  font-style: italic;
+  font-size: medium;
+  opacity: 0;
+  display: none;
+}
+
+#undone-after {
+  color: #f54150;
+  margin: 2%;
+  font-style: italic;
+  font-size: medium;
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+.amount {
+  width: 80%;
+  height: 10%;
+  margin: -10% 5%;
+  opacity: 0.8;
+}
+
+.DropDown {
+  float: left;
+  width: 25%;
+  Color: #b9b9b9;
+  margin: 2% 2%;
+  font-size: 90%;
+}
+
+.gridView {
+  margin: 15% 13%;
+  width: 80%;
+  height: 45%;
+}
+
+
+.monthView {
+  background-color: #FFF;
+  width: 9%;
+  height: 15%;
+  border: 1px solid #000;
+  display: inline-block;
+  margin: 1% 2%;
+  padding-left: 3px;
+  color: #b9b9b9;
+  font-style: italic;
+  font-size: small;
+}
+
+.monthView:hover {
+  background-color: #eae8ea;
+  color: #000;
+  cursor: pointer;
+}
+
+.timesIcon{
+  color: #535353;
+  float: right;
+  margin: 10px 10px;
+  opacity: 0.5;
+}
+
+.timesIcon:hover{
+  pointer-events: painted;
+  color: #d11726;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.calendar-prev {
+  position: absolute ;
+  left: 30%;
+  top: 30%;
+  width: 40%;
+  height: 7%;
+  background-color: #b9b9b9;
+  z-index: 1;
+  border: 2px solid #535353;
+}
+
+.calendar-after {
+  position: absolute ;
+  left: 30%;
+  top: 30%;
+  height: 35%;
+  width: 40%;
+  transition: height 1.5S;
+  background-color: #b9b9b9;
+  z-index: 1;
+  border: 2px solid #535353;
+}
+
 
 .todo-app {
   min-width: 600px;
@@ -17,6 +142,15 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.todo-app.blur {
+  filter: blur(4px);
+  opacity: 0.3;
+  transition: opacity 1s;
 }
 
 form {
@@ -33,6 +167,8 @@ input[type="text"] {
   
 }
 
+
+
 button {
   font-size: 1rem;
   height: 32px;
@@ -48,10 +184,17 @@ button[type=submit] {
   margin-bottom: 8px; 
 }
 
-.button1 {
-  background-color: white;
-  color: black;
-  border: 2px solid red; /* Green */
+button[type=button] {
+  float: left;
+  background-color: #cacaca;
+  margin: 0px 0px 25px 18px;
+  padding-left: 7px;
+}
+
+button[type=button]:hover {
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 1s ;
 }
 
 .controls {
@@ -66,10 +209,12 @@ button[type=submit] {
   color: #888888;
 }
 
+
 .control-btn.active {
-  background-color: navajowhite;
-  color: blue;
+  background-color: #4CAF50;
+  color: white;
 }
+
 
 .todo-list {
   min-width: 90%;
@@ -83,6 +228,30 @@ button[type=submit] {
   padding: 8px;
   margin: 8px 0;
   cursor: pointer;
+  opacity: 0.5;
+}
+
+
+.icon{
+  float: right;
+  margin: -20px 0;
+  opacity: 0.3;
+  display: none;
+}
+
+.icon:hover {
+  opacity: 1;
+  color: #ff0000;
+}
+
+.todo-list li:hover {
+  opacity: 0.9;
+}
+
+.todo-list li:hover .icon{
+  opacity: 0.8;
+  transition: opacity 1s;
+  display: block;
 }
 
 .todo-list li:first-child {
@@ -100,7 +269,9 @@ button[type=submit] {
   font-size: 1.2rem;
   text-align: center;
   padding: 8px;
+  color: #ff0000;
 }
+
 
 .danger {
   background-color: #FF6B6B;
