@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import { fetchTodos, toggleTodo, deleteTodos } from '../reducers/todoReducer';
+import { fetchTodos, toggleTodo, removeTodo } from '../reducers/todoReducer';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 import { VISIBILITY_FILTERS } from '../actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const TodoItem = (props) => (
-    <li>
-        <p onClick={() => props.toggleTodo(props.id)}
-            className={props.isComplete ? "task completed" : "task"}>{props.name}</p>
-        <button onClick = { (e) => {
-                e.preventDefault();
-                props.deleteTodos(props.id)}
-        }
-            className='button1'>Delete</button>
+    <li onClick={() => props.toggleTodo(props.id)} >
+        <p className={props.completed ? "task completed" : "task"}>{props.task}</p>
+        <FontAwesomeIcon className={'icon'}
+            icon="trash" onClick={() => props.removeTodo(props.id)}
+        />
     </li>
 );
 
@@ -27,11 +25,11 @@ class TodoList extends Component {
                 return task;
             }
             if (filterOption === VISIBILITY_FILTERS.SHOW_ACTIVE 
-                && task.isComplete === false) {
+                && task.completed === false) {
                 return task;
             }
             if (filterOption === VISIBILITY_FILTERS.SHOW_COMPLETED 
-                && task.isComplete === true) {
+                && task.completed === true) {
                 return task;
             }
             return null;
@@ -43,12 +41,12 @@ class TodoList extends Component {
     listTasks = (filteredTodos) => {
         const taskList = filteredTodos.map(todo => 
             <TodoItem
-                key={ todo.id }
-                deleteTodos = { this.props.deleteTodos }
-                toggleTodo = { this.props.toggleTodo }
-                { ...todo } /> 
+                key={ todo.id } 
+                toggleTodo={ this.props.toggleTodo }
+                removeTodo={this.props.removeTodo}
+                { ...todo } />
         );
-        return taskList;
+        return (taskList)
     }
 
     render() {
@@ -68,16 +66,17 @@ class TodoList extends Component {
 TodoList.propTypes = {
     todos: PropTypes.array.isRequired,
     toggleTodo: PropTypes.func.isRequired,
+    removeTodo: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => {
     return {
         todos: state.todos,
-        visibilityFilter: state.visibilityFilter
+        visibilityFilter: state.visibilityFilter,
     }
 }
 
 export default connect(
     mapStateToProps,
-    { fetchTodos, toggleTodo, deleteTodos }
+    { fetchTodos, toggleTodo, removeTodo }
 )(TodoList)
